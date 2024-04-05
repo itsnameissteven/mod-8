@@ -1,9 +1,6 @@
-package dealership;
+package main;
 import java.util.ArrayList;
-import validator.Validator;
 import java.util.Scanner;
-
-import automobile.Automobile;
 public class Dealership {
   private String name;
   private ArrayList<Automobile> inventory;
