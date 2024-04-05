@@ -11,9 +11,11 @@ public class Automobile {
 	private int year;
 	private double mileage;
 	private double cost;
+	// A type to allow callback as arguments.
 	interface Callback {
 		void run(Scanner scnr); 
 	}
+	// Class to validate inputs
 	private Validator validator = new Validator();
 	
 	public Automobile() {
@@ -36,7 +38,7 @@ public class Automobile {
 		this.cost = cost;
 	}
 	
-	// Getters
+	// Getters, return the requested value
 	public String getVin() {
 		return this.vin;
 	}
@@ -102,15 +104,25 @@ public class Automobile {
 		this.cost = cost;
 	}
 	
+	// Returns an array of user friendly strings.
+	public String[] formatCarDetails() {
+		String[] carList= {
+				"Vin: " + this.vin,
+				"Make: " + this.make, 
+				"Model: " + this.model, 
+				"Color: " + this.color, 
+				"Year " + this.year, 
+				"Mileage: " + this.mileage,
+				"Cost: " + this.cost,
+				};
+		return carList;
+	}
+	
 	// A user friendly display of all the car details
 	public void displayCarDetails() {
-		System.out.println("Vin: " + this.vin);
-		System.out.println("Make: " + this.make);
-		System.out.println("Model: " + this.model);
-		System.out.println("Color: " + this.color);
-		System.out.println("Year " + this.year);
-		System.out.println("Mileage: " + this.mileage);
-		System.out.println("Cost: " + this.cost);
+		for(int i = 0; i < this.formatCarDetails().length; i++) {
+			System.out.println(this.formatCarDetails()[i]);
+		}
 	}
 	
 	// functions to prompt user inputs, each goes through the validation process
@@ -164,15 +176,13 @@ public class Automobile {
 	}
 	
 	// Gets user inputs from scanner one at a time.
-	public void inputCarDetails() {	
-		try(Scanner scnr = new Scanner(System.in)) {
-			this.validateInput(scnr, this::promptVinInput);
-			this.validateInput(scnr, this::promptMakeInput);
-			this.validateInput(scnr, this::promptModelInput);
-			this.validateInput(scnr, this::promptColorInput);
-			this.validateInput(scnr, this::promptYearInput);
-			this.validateInput(scnr, this::promptMileageInput);
-			this.validateInput(scnr, this::promptCostInput);	
-		}
+	public void inputCarDetails(Scanner scnr) {	
+		this.validateInput(scnr, this::promptVinInput);
+		this.validateInput(scnr, this::promptMakeInput);
+		this.validateInput(scnr, this::promptModelInput);
+		this.validateInput(scnr, this::promptColorInput);
+		this.validateInput(scnr, this::promptYearInput);
+		this.validateInput(scnr, this::promptMileageInput);
+		this.validateInput(scnr, this::promptCostInput);	
 	}
 }
