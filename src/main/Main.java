@@ -4,8 +4,6 @@ import java.util.Scanner;
 import java.io.PrintWriter;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import dealership.Dealership;
-import automobile.Automobile;
 
 public class Main {
 	public static void main(String[] args) {

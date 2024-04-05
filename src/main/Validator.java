@@ -1,4 +1,4 @@
-package validator;
+package main;
 import java.util.Scanner;
 
 public class Validator {

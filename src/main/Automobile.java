@@ -1,6 +1,5 @@
-package automobile;
+package main;
 import java.util.Scanner;
-import validator.Validator;
 
 
 public class Automobile {
