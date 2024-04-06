@@ -1,0 +1,16 @@
+Car 1
+ - Vin: 12
+ - Make: Toyota
+ - Model: Corolla
+ - Color: Blue
+ - Year 2012
+ - Mileage: 32980.0
+ - Cost: 16987.0
+Car 1
+ - Vin: 2483457
+ - Make: Toyota
+ - Model: 4Runner
+ - Color: Green
+ - Year 2023
+ - Mileage: 3.0
+ - Cost: 54628.0
