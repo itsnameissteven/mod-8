@@ -6,7 +6,7 @@ Car 1
  - Year 2012
  - Mileage: 32980.0
  - Cost: 16987.0
-Car 1
+Car 2
  - Vin: 2483457
  - Make: Toyota
  - Model: 4Runner
