@@ -42,8 +42,9 @@ public class Main {
 				System.out.println("What woud you like to do? Select a number.");
 				System.out.println("1) Add car to inventory");
 				System.out.println("2) Remove car from inventory");
-				System.out.println("3) Save inventory to file");
-				System.out.println("4) Exit the program");
+				System.out.println("3) Display Inventory");
+				System.out.println("4) Save inventory to file");
+				System.out.println("5) Exit the program");
 			
 				int choice = scnr.nextInt();
 				scnr.nextLine();
@@ -55,10 +56,13 @@ public class Main {
 					case 2:
 						dealership.removeCar(scnr);
 						break;
-					case 3: 
+					case 3:
+						dealership.displayInventory();
+						break;
+					case 4: 
 						writeToFile(dealership);
 						break;
-					case 4:
+					case 5:
 						System.out.println("Exiting the program");
 						return;
 				}
