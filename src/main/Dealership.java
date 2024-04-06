@@ -53,7 +53,7 @@ public class Dealership {
 	  // Loop through the array and remove car if provided vin is found.
 	  for(int i = 0; i < this.inventory.size(); i++) {
 		  if(this.inventory.get(i).getVin().equals(vin)) {
-			  Automobile removedCar = this.inventory.get(i);
+			  Automobile removedCar = this.inventory.remove(i);
 			  System.out.println("car removed from inventory; ");
 			  removedCar.displayCarDetails();
 			  return;
@@ -62,5 +62,19 @@ public class Dealership {
 	  // Let user know the vin was not found.
 	  System.out.println("No car found with that vin number please try again");
   }
+  
+  // Displays all inventory car details
+  public void displayInventory() {
+	  if(inventory.size() == 0) {
+		  System.out.println("There are no cars in your inventory");
+		  return;
+	  }
+
+	  for(int i = 0; i < this.inventory.size(); i++) {
+		  System.out.println("running");
+		  this.inventory.get(i).displayCarDetails();
+	  }
+  }
+  
   
 }

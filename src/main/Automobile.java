@@ -170,6 +170,9 @@ public class Automobile {
 				break;
 			} catch (IllegalArgumentException e) {
 				System.out.println(e.getMessage());
+			} catch (Exception e) {
+				System.out.println("Incorrect input type, try again");
+				scnr.next();
 			}
 		}
 	}
